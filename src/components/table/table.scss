@@ -1,0 +1,45 @@
+.table__container{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Spotify Font Medium', sans-serif;
+
+  }
+  
+  th, td {
+    border-bottom: 1px solid #c9c9c9;
+    text-align: left;
+    padding: 8px;
+  }
+
+  td{
+    border: none;
+    color: #c9c9c9c4;
+  }
+  
+  th {
+    color: #c9c9c9;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  th:nth-child(1), td:nth-child(1) {
+    width: 5%; /* ID column with the least width */
+  }
+  
+  th:nth-child(2), td:nth-child(2),
+  th:nth-child(3), td:nth-child(3) {
+    width: 35%; /* Title and Album columns with equal widest width */
+  }
+  
+  th:nth-child(4), td:nth-child(4) {
+    width: 20%; /* Duration column with a medium width */
+  }
+  

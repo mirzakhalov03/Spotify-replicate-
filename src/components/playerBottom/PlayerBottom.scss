@@ -1,0 +1,95 @@
+.PlayerBottom{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    background-color: #181818;
+    padding: 20px;
+    font-family: "Spotify Font Medium", sans-serif;
+
+}
+
+.albumNameImg{
+    width: 280px;
+    height: 80px;
+    color: white;
+
+    .albumImg{
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    
+}
+
+.playerBtns{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+    .Btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        button{
+            width: 34px;
+        }
+    
+    }
+
+    .filler{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        color: #A6A6A6;
+        font-size: 14px;
+        input{
+            width: 450px;
+            height: 3px;
+            background-color: gray;
+            color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    
+}
+
+.volume-Extra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    button{
+        width: 28px;
+        opacity: 0.5;
+        transition: .2s;
+        // background-color: red;
+        // font-size: 32px;
+    }
+
+    button:hover{
+        opacity: 1;
+    }
+
+    input{
+        width: 100px;
+        height: 3px;
+        background-color: gray;
+        color: gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

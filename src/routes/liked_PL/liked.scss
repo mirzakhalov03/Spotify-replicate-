@@ -1,0 +1,66 @@
+.likedFront{
+    background: linear-gradient(180deg,#604EC1 25%,#121212 100%);
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Spotify Font Medium', sans-serif;
+    color: white;
+
+    .liked__wrapper{
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 30px;
+        
+
+       
+    }
+
+    .likedTitle{
+        font-family: "Spotify Font SemiBold", sans-serif;
+        font-size: 122px;
+        line-height: 120px;
+        letter-spacing: -4px;
+    }
+
+    .liked-info{
+        span{
+            img{
+                width: 30px;
+                height: 30px;
+                object-fit: contain;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.likedSongsBtns{
+    // padding-left: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.search_filterBtns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    button{
+        width: 20px;
+    }
+
+    select{
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-family: "Spotify Font Medium", sans-serif;
+        font-size: 18px;
+        outline: none;
+    }
+    
+}

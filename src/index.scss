@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Spotify Font SemiBold';
+    src: url('../public/Fonts/Metropolis-SemiBold.otf') format('opentype');
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: 'Spotify Font Medium';
+    src: url('../public/Fonts/metropolis.medium.otf') format('opentype');
+  }
+
+  $spotifySemiBold: 'Spotify Font SemiBold', sans-serif;
+  $spotifyMedium: 'Spotify Font Medium', sans-serif;
+
+  

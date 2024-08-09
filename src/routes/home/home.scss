@@ -1,0 +1,31 @@
+.homeFront{
+    background: linear-gradient(180deg,#3333A3 25%,#121212 100%);
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Spotify Font Medium', sans-serif;
+    color: white;
+}
+
+.homeFrontTitle{
+    font-family: 'Spotify Font SemiBold', sans-serif;
+    color: #fff;
+    font-size: 50px;
+
+    animation: appear 2s ease-in-out;
+
+    @keyframes appear {
+        0%{
+            transform: scale(0.5);
+            opacity: 0;
+        }
+        100%{
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+.homePlaylist{
+    margin: 0 auto;
+    justify-content: center;
+}
