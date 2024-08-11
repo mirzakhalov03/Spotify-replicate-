@@ -4,7 +4,7 @@ import Table from '../../components/table/Table';
 import { useParams } from 'react-router';
 import useFetch from '../../hooks/useFetch';
 import playGreen from '../../images/playGreen.svg';
-import heartUnfilled from '../../images/heart_XS.svg';
+import heartUnfilled from '../../images/heartUnfilled.svg';
 import download from '../../images/download.svg';
 import options from '../../images/options.svg';
 import search from '../../images/searchBtn.svg';
