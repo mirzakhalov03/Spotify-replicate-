@@ -7,7 +7,7 @@ import playGreen from '../../images/playGreen.svg';
 import heartUnfilled from '../../images/heartUnfilled.svg';
 import download from '../../images/download.svg';
 import options from '../../images/options.svg';
-import search from '../../images/searchBtn.svg';
+import search from '../../images/SearchBtn.svg';
 import { useDispatch } from 'react-redux';
 import { SET_MUSIC_LIST } from '../../redux/actions/actions';
 import "./playlist.scss";
