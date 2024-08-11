@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './PlayerBottom.scss';
-import Heart from '../../images/heart.svg';
+import Heart from '../../images/Heart.svg';
 import unfilledHeart from '../../images/heartUnfilled.svg';
 import shuffleIcon from '../../images/shuffle.svg';
 import playback from '../../images/playback.svg';
