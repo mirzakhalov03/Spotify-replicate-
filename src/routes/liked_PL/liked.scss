@@ -2,13 +2,16 @@
     background: linear-gradient(180deg,#604EC1 25%,#121212 100%);
     max-width: 100%;
     margin: 0 auto;
+    min-height: 400px;
     font-family: 'Spotify Font Medium', sans-serif;
     color: white;
 
     .liked__wrapper{
         width: 90%;
         margin: 0 auto;
+        padding: 10px;
         padding-top: 30px;
+        gap: 10px;
         
 
        
@@ -34,7 +37,6 @@
 }
 
 .likedSongsBtns{
-    // padding-left: 50px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -61,6 +63,57 @@
         font-family: "Spotify Font Medium", sans-serif;
         font-size: 18px;
         outline: none;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .likedFront{
+        .liked__wrapper{
+            width: 100%;
+        }
+
+        .likedTitle{
+            font-size: 90px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .likedFront{
+        .liked__wrapper{
+            width: 100%;
+        }
+
+        .likedTitle{
+            font-size: 57px;
+            line-height: 70px;
+
+        }
+
+        .liked__img{
+            width: 300px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .likedFront{
+        .liked__wrapper{
+            width: 100%;
+        }
+
+        .likedTitle{
+            font-size: 50px;
+            line-height: 60px;
+
+        }
+
+        .liked__img{
+            width: 250px;
+        }
     }
     
 }

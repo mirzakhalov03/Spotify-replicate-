@@ -1,0 +1,5 @@
+export const LIKE = "LIKE"
+export const DISLIKE = "DISLIKE"
+export const REMOVE = "REMOVE"
+export const SET_MUSIC_DATA = "SET_MUSIC_DATA"
+export const SET_MUSIC_LIST = "SET_MUSIC_LIST"

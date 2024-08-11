@@ -4,6 +4,7 @@
     margin: 0 auto;
     font-family: 'Spotify Font Medium', sans-serif;
     color: white;
+    min-height: 400px;
 }
 
 .homeFrontTitle{
@@ -28,4 +29,10 @@
 .homePlaylist{
     margin: 0 auto;
     justify-content: center;
+}
+
+.ListsInHomePage{
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 50px;
 }

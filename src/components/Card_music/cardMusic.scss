@@ -1,7 +1,12 @@
 .cardMusic{
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+
     img{
-        object-fit: cover;
-        width: 100%;
+        object-fit: contain;
+        width: 90%;
+        margin: 0 auto;
         
     }
 
@@ -13,6 +18,9 @@
     }
 
     p{
+        height: 40px;
+        font-size: 14px;
         color: #B3B3B3;
+        overflow-y: auto;
     }
 }

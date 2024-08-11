@@ -31,15 +31,23 @@ table {
   }
   
   th:nth-child(1), td:nth-child(1) {
-    width: 5%; /* ID column with the least width */
+    width: 5%; 
   }
   
   th:nth-child(2), td:nth-child(2),
   th:nth-child(3), td:nth-child(3) {
-    width: 35%; /* Title and Album columns with equal widest width */
+    width: 35%; 
   }
   
   th:nth-child(4), td:nth-child(4) {
-    width: 20%; /* Duration column with a medium width */
+    width: 20%; 
+  }
+
+  tr{
+    cursor: pointer;
+
+    &:hover{
+      background-color: #181818;
+    }
   }
   

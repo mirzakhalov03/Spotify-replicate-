@@ -1,6 +1,7 @@
 import Home from "./home/Home"
 import Liked from "./liked_PL/Liked"
-import { Navigate, useRoutes } from "react-router-dom"
+import { useRoutes } from "react-router-dom"
+import Playlist from "./playlist/Playlist"
 
 
 
@@ -16,6 +17,10 @@ const RouteController = () => {
     {
         path: "liked",
         element: <Liked/>
+    },
+    {
+        path: "/playlist/:id",
+        element: <Playlist/>
     }
   ])
     

@@ -1,14 +1,18 @@
-import React from 'react'
-import chillmix from '../../images/chillMix.png'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './homePlaylist.scss'
 
-const HomePlaylist = () => {
+const HomePlaylist = ({ playlist }) => {
   return (
-    <div className=' w-[400px] flex  items-center rounded-xl gap-4 bg-[rgba(255,255,255,0.2)] overflow-hidden'>
-        {/* <div className='img w-[60px] h-[60px] bg-black'></div> */}
-        <img src={chillmix} style={{objectFit: 'cover'}} alt="" />
-        <div className='p-5'>Chill Mix</div>
-    </div>
-  )
-}
+    <NavLink  to={`/playlist/${playlist.id}`} className='featuredPlaylist w-[400px] flex items-center rounded-xl gap-4 bg-[rgba(255,255,255,0.2)] overflow-hidden'>
+      <img 
+        src={playlist.images[0]?.url} 
+        style={{ objectFit: 'cover', width: '100px', height: '100%' }} 
+        alt={playlist.name} 
+      />
+      <div className='p-5'>{playlist.name}</div> 
+    </NavLink>
+  );
+};
 
-export default HomePlaylist
+export default HomePlaylist;

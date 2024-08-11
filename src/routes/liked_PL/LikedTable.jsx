@@ -1,14 +1,12 @@
 import React, { useMemo } from 'react';
 import chillmix from '../../images/chillMix.png';
 import time from '../../images/time.svg';
-import './table.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import playingStatus from '../../images/playingStatus.svg';
+import '../../components/table/table.scss';
+import { useDispatch } from 'react-redux';
 import { SET_MUSIC_DATA } from '../../redux/actions/actions';
 
-const Table = ({ tracks }) => {
+const LikedTable = ({ tracks }) => {
   const dispatch = useDispatch();
-  const currentlyPlayingTrack = useSelector(state => state.trackData); 
 
   const formattedTracks = useMemo(() => {
     return tracks?.map((item, index) => {
@@ -48,36 +46,23 @@ const Table = ({ tracks }) => {
         </thead>
         <tbody>
           {formattedTracks?.map((item) => (
-            <tr
-              onClick={() => handlePlayTrack(item.track)}
-              key={item.track.defaultId}
-            >
-              <td>
-                {currentlyPlayingTrack?.id === item.track.id ? (
-                  <img
-                    src={playingStatus}
-                    alt="Playing"
-                    className="playing-status-icon"
-                  />
-                ) : (
-                  item.track.defaultId
-                )}
-              </td>
+            <tr onClick={() => handlePlayTrack(item.track)} key={item.track.defaultId}>
+              <td>{item.track.defaultId}</td>
               <td className="flex gap-3">
                 <img
                   className="w-[40px] h-[40px] rounded-xl"
-                  src={item?.track?.album?.images[0]?.url || chillmix}
+                  src={item?.album?.images[0]?.url || chillmix}
                   alt=""
                 />
                 <span className="flex flex-col">
                   {item.track.name}{' '}
                   <span className="text-[#b3b3b374]">
-                    {item?.track?.artists[0]?.name}
+                    {item?.artists[0]?.name}
                   </span>
                 </span>
               </td>
-              <td>{item.track.album.name}</td>
-              <td>{item.track.formattedDuration}</td>
+              <td>{item.album.name}</td>
+              <td>{item.formattedDuration}</td>
             </tr>
           ))}
         </tbody>
@@ -86,4 +71,4 @@ const Table = ({ tracks }) => {
   );
 };
 
-export default Table;
+export default LikedTable;

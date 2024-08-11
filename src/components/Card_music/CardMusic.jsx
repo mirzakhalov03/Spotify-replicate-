@@ -1,14 +1,15 @@
-import React from 'react'
-import chillmix from '../../images/chillMix.png'
 import './cardMusic.scss'
+import { NavLink } from 'react-router-dom'
 
-const CardMusic = () => {
+
+const CardMusic = ({mix}) => {
+  // console.log(mix)
   return (
-    <div className='cardMusic w-[225px] h-[325px] bg-[rgba(255,255,255,0.1)] rounded-lg p-4'>
-        <img src={chillmix} alt="" />
-        <h3>Folk & Acoustic...</h3>
-        <p>Canyon City, Crooked Still, Gregory Alan...</p>
-    </div>
+    <NavLink to={`/playlist/${mix.id}`} className='cardMusic bg-[rgba(255,255,255,0.1)] rounded-lg '>
+        <img src={mix.images[0].url} alt="" />
+        <h3>{mix.name}</h3>
+        <p>{mix.description}</p>
+    </NavLink>
   )
 }
 

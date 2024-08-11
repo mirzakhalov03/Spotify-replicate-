@@ -53,13 +53,31 @@
         font-size: 14px;
         input{
             width: 450px;
+            accent-color: white;
             height: 3px;
             background-color: gray;
             color: gray;
             display: flex;
             align-items: center;
             justify-content: center;
+
+            &:hover{
+                accent-color: lime;
+                background-color: lime;
+            }
         }
+
+        
+
+        input[type="range"]::-moz-range-thumb {
+            width: 4px;
+            height: 16px;
+            accent-color: white;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: opacity 0.3s ease;
+        }
+
     }
 
     
@@ -75,8 +93,6 @@
         width: 28px;
         opacity: 0.5;
         transition: .2s;
-        // background-color: red;
-        // font-size: 32px;
     }
 
     button:hover{
@@ -84,6 +100,7 @@
     }
 
     input{
+        accent-color: white;
         width: 100px;
         height: 3px;
         background-color: gray;
@@ -91,5 +108,120 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        &:hover{
+            accent-color: lime;
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .PlayerBottom{
+        .queue{
+            display: none;
+        }
+
+        .devices{
+            display: none;
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .PlayerBottom{
+        .albumNameImg{
+            gap: 10px;
+        }
+
+        .playerBtns{
+            .filler{
+                gap: 10px;
+                .progress{
+                    width: 300px;
+                }
+            }
+            .Btns{
+                gap: 10px;
+                button{
+                    width: 30px;
+                }
+            }
+        }
+        
+
+        
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .PlayerBottom{
+        gap: 10px;
+        justify-content:center;
+        .albumNameImg{
+            width: 150px;
+            .albumImg{
+                display: none;
+            }
+        }
+
+        .playerBtns{
+            .filler{
+                gap: 10px;
+                .progress{
+                    width: 300px;
+                }
+            }
+            .Btns{
+                gap: 10px;
+                button{
+                    width: 30px;
+                }
+            }
+        }
+        
+        .fullscreen{
+            display: none;
+        }
+
+        .volume-Extra{
+            gap: 0px;
+        }
+
+        .verticalVolume{
+            width: 60px;
+            transform: rotate(-90deg);
+        }
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .PlayerBottom{
+        flex-direction: column;
+        height: 120px;
+        padding: 5px;
+        .albumNameImg{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            .musicName{
+                font-size: 14px;
+            }
+            .artist{
+                display: none;
+            }
+
+        }
+
+        .playerBtns{
+            margin: 0 auto;
+            gap: 2px;
+        }
+    }
+    .volume-Extra{
+        display: none;
     }
 }

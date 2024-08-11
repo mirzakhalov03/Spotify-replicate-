@@ -1,34 +1,40 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
 import Sider from '../../components/sider/Sider';
-import './liked.scss';
-import bigHeart from '../../images/bigHeart.svg';
+import Table from '../../components/table/Table';
+import { useParams } from 'react-router';
+import useFetch from '../../hooks/useFetch';
 import playGreen from '../../images/playGreen.svg';
 import heartUnfilled from '../../images/heart_XS.svg';
 import download from '../../images/download.svg';
 import options from '../../images/options.svg';
 import search from '../../images/searchBtn.svg';
-import LikedTable from './LikedTable';
+import { useDispatch } from 'react-redux';
+import { SET_MUSIC_LIST } from '../../redux/actions/actions';
+import "./playlist.scss";
 
+const Playlist = () => {
+  const { id } = useParams();
+  const [data] = useFetch(`/playlists/${id}`);
+  const dispatch = useDispatch();
+  
+  const tracks = data?.tracks?.items;
 
-const Liked = () => {
-  const likedSongs = useSelector((state) => state.like); 
-  console.log(likedSongs);
+  useEffect(() => {
+    if (tracks && tracks.length > 0) {
+      dispatch({ type: SET_MUSIC_LIST, payload: tracks });
+    } 
+  }, [tracks, dispatch]);
 
   return (
     <div className='w-full flex '>
       <Sider />
-      <div className='w-full min-h-screen bg-[rgb(18,18,18)]'>
+      <div className=' w-full min-h-screen bg-[rgb(18,18,18)]'>
         <div className="likedFront w-full">
           <div className="liked__wrapper flex items-end ">
-            <img className='liked__img' src={bigHeart} alt="" />
+            <img className='liked__img' src={data?.images[0]?.url} alt="" />
             <div className='liked-info'>
               <strong>Public Playlist</strong>
-              <p className='likedTitle'>Liked Songs</p>
-              <span className='flex gap-5 items-center'>
-                <span>{likedSongs.length} songs</span>
-              </span>
-              <br />
+              <p className='likedTitle'>{data?.name}</p>
             </div>
           </div>
         </div>
@@ -41,19 +47,17 @@ const Liked = () => {
           </div>
           <div className="search_filterBtns">
             <button><img src={search} alt="" /></button>
-            <select name="" id="">
+            <select>
               <option value="">Custom order</option>
-              <option value="">Custom order</option>
+              <option value="topRated">Top Rated</option>
+              <option value="MostPlayed">Most Played</option>
             </select>
           </div>
         </div>
-        <LikedTable tracks={likedSongs} /> 
-        <br />
-        <br />
-        <br />
+        <Table tracks={tracks} />
       </div>
     </div>
   );
-}
+};
 
-export default Liked;
+export default Playlist;
