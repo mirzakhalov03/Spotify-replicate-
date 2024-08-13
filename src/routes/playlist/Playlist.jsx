@@ -55,6 +55,11 @@ const Playlist = () => {
           </div>
         </div>
         <Table tracks={tracks} />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </div>
   );

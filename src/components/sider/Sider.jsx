@@ -16,9 +16,8 @@ const Sider = () => {
         <div className='w-full p-5'>
             <NavLink to="/" className='siderSections flex gap-2 items-center'><img className='w-5' src={HomeBtn} alt="" /> <span>Home</span></NavLink>
             <br />
-            <div className='siderSections flex gap-2 items-center'><img className='w-5' src={SearchBtn} alt="" /><span>Search</span></div>
+            <NavLink to="/search" className='siderSections flex gap-2 items-center'><img className='w-5' src={SearchBtn} alt="" /><span>Search</span></NavLink>
             <br />
-            <div className='siderSections flex gap-2 items-center'><img className='w-5' src={Library} alt="" /> <span>Your Library</span></div>
             <br />
             <br />
             <div className='siderSections flex gap-2 items-center'><img className='w-5' src={AddLibrary} alt="" /> <span> Create Playlist</span></div>

@@ -1,0 +1,37 @@
+.navigation{
+    display: none;
+    
+}
+
+.active{
+    background-color: rgba(255, 255, 255, 0.154);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav{
+    display: flex;
+    color: white;
+    align-items: center;
+    gap: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    .navigation{
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 5px 10px;
+        background-color: rgba(0, 0, 0, 0.573);
+        backdrop-filter: blur(10px);
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    
+}

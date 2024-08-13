@@ -38,10 +38,10 @@ const PlayerBottom = () => {
     const newAudio = new Audio(trackData?.preview_url);
     setAudio(newAudio);
     setCurrentTime(0);
-    setIsPlaying(true); 
+    setIsPlaying(false);  // Set isPlaying to false initially
 
-    newAudio.volume = volumeLevel; 
-    newAudio.play(); 
+    newAudio.volume = volumeLevel;
+    // Don't autoplay here
   }, [trackData]);
 
   useEffect(() => {
@@ -149,9 +149,9 @@ const PlayerBottom = () => {
           src={trackData?.album?.images[0]?.url || musicPlaceholder}
           alt=""
         />
-        <div>
-          <h2 className='musicName'>{trackData?.name || 'Music Name'}</h2>
-          <h2 className="artist text-[#b3b3b374]">{trackData?.artists?.[0]?.name || 'Artist'}</h2>
+        <div className='albumName'>
+          <p className='musicName'>{trackData?.name || 'Music Name'}</p>
+          <p className="artist text-[#b3b3b374]">{trackData?.artists?.[0]?.name || 'Artist'}</p>
         </div>
         <img 
           className="heart" 
@@ -162,7 +162,7 @@ const PlayerBottom = () => {
       </div>
       <div className="playerBtns">
         <div className="Btns">
-          <button onClick={handleShuffle}>
+          <button className='shuffle' onClick={handleShuffle}>
             <img className={`opacity-50 ${isShuffle ? 'active' : ''}`} src={shuffleIcon} alt="Shuffle" />
           </button>
           <button onClick={handlePlayBackward}>
@@ -174,7 +174,7 @@ const PlayerBottom = () => {
           <button onClick={handlePlayForward}>
             <img src={playForward} alt="Forward" />
           </button>
-          <button onClick={handleLoop}>
+          <button className='loop' onClick={handleLoop}>
             <img className={`opacity-50 ${isLoop ? 'active' : ''}`} src={repeatIcon} alt="Loop" />
           </button>
         </div>

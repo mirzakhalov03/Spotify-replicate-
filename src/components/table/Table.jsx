@@ -5,6 +5,7 @@ import './table.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import playingStatus from '../../images/playingStatus.svg';
 import { SET_MUSIC_DATA } from '../../redux/actions/actions';
+import GreenPlayBtn from '../../images/playGreen.svg'
 
 const Table = ({ tracks }) => {
   const dispatch = useDispatch();

@@ -1,4 +1,5 @@
 import './App.scss'
+import Nav from './components/nav/Nav'
 import PlayerBottom from './components/playerBottom/PlayerBottom'
 import RouteController from "./routes"
 import { useEffect, useState } from 'react'
@@ -33,10 +34,11 @@ function App() {
   }, [])
 
   return (
-    <>
+    <div className='app'>
+      <Nav />
       <RouteController/>
       <PlayerBottom/>
-    </>
+    </div>
   )
 }
 

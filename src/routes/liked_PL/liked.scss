@@ -19,8 +19,8 @@
 
     .likedTitle{
         font-family: "Spotify Font SemiBold", sans-serif;
-        font-size: 122px;
-        line-height: 120px;
+        font-size: 100px;
+        line-height: 100px;
         letter-spacing: -4px;
     }
 
@@ -74,32 +74,18 @@
         }
 
         .likedTitle{
-            font-size: 90px;
+            font-size: 60px;
+            line-height: 65px;
+
+        }
+        .liked__img{
+            width: 280px;
         }
     }
     
 }
 
 @media screen and (max-width: 800px) {
-    .likedFront{
-        .liked__wrapper{
-            width: 100%;
-        }
-
-        .likedTitle{
-            font-size: 57px;
-            line-height: 70px;
-
-        }
-
-        .liked__img{
-            width: 300px;
-        }
-    }
-    
-}
-
-@media screen and (max-width: 700px) {
     .likedFront{
         .liked__wrapper{
             width: 100%;
@@ -113,6 +99,46 @@
 
         .liked__img{
             width: 250px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .likedFront{
+        .liked__wrapper{
+            width: 100%;
+        }
+
+        .likedTitle{
+            font-size: 40px;
+            line-height: 50px;
+
+        }
+
+        .liked__img{
+            width: 200px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .likedFront{
+        min-height: 300px;
+        .liked__wrapper{
+            width: 100%;
+        }
+
+        .likedTitle{
+            font-size: 35px;
+            line-height: 40px;
+            letter-spacing: .1px;
+
+        }
+
+        .liked__img{
+            width: 180px;
         }
     }
     

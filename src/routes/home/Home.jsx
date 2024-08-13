@@ -9,6 +9,7 @@ import ForYou from '../../components/playlist/ForYou';
 import Recent from '../../components/playlist/Recent';
 import Jump from '../../components/playlist/Jump';
 import Unique from '../../components/playlist/Unique';
+import Nav from '../../components/nav/Nav';
 
 const Home = () => {
   const [playlists, setPlaylists] = useState([]); 
@@ -16,10 +17,12 @@ const Home = () => {
 
   useEffect(() => {
     const getFeaturedPlaylists = async () => {
+      if (!token) return; 
+
       try {
         const response = await axios.get('https://api.spotify.com/v1/browse/featured-playlists', {
           headers: {
-            Authorization: `${token}` 
+            Authorization: `${token}`
           },
           timeout: 10000,
         });

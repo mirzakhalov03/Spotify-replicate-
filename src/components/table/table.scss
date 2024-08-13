@@ -51,3 +51,38 @@ table {
     }
   }
   
+
+  .table__container {
+    
+  
+    .relative {
+      position: relative;
+      text-align: center; 
+    }
+  
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  
+    .playing-status-icon {
+      width: 20px; 
+      height: 20px; 
+    }
+  
+    tr{
+      &:hover {
+        .play-button {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  

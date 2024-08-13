@@ -199,14 +199,18 @@
 
 @media screen and (max-width: 600px) {
     .PlayerBottom{
+        background-color: #181818da;
+        backdrop-filter: blur(10px);
         flex-direction: column;
-        height: 120px;
         padding: 5px;
         .albumNameImg{
             display: flex;
+            width: 90%;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
+            height: 40px;
+            overflow: auto;
             .musicName{
                 font-size: 14px;
             }
@@ -214,11 +218,28 @@
                 display: none;
             }
 
+           
+
         }
+        
+
+       
 
         .playerBtns{
             margin: 0 auto;
             gap: 2px;
+        }
+
+        .filler{
+            margin-bottom: 5px;
+        }
+
+        .loop{
+            display: none;
+        }
+
+        .shuffle{
+            display: none;
         }
     }
     .volume-Extra{
